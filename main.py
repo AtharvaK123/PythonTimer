@@ -1,8 +1,9 @@
 import time 
+from playsound import playsound 
   
-# define the countdown func. 
+playsound("bg.mp3")  
+ 
 def countdown(t): 
-    
     while t: 
         mins, secs = divmod(t, 60) 
         timer = '{:02d}:{:02d}'.format(mins, secs) 
@@ -10,9 +11,7 @@ def countdown(t):
         time.sleep(1) 
         t -= 1
       
-    print('Fire in the hole!!') 
-  
-  
+    print('Time\'s Up!') 
 # input time in seconds 
 t = input("Enter the time in seconds: ") 
   
